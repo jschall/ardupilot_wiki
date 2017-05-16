@@ -94,8 +94,9 @@ def sphinx_make(site):
             continue
         if not site==None and not site==wiki:
             continue
-        print('make and clean: %s' % wiki)
-        subprocess.check_call(["make", "-C", wiki ,"clean"])
+        # print('clean: %s' % wiki)
+        # subprocess.check_call(["make", "-C", wiki ,"clean"])
+        print('make: %s' % wiki)
         subprocess.check_call(["make", "-C", wiki ,"html"])
             
 
